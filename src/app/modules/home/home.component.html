@@ -21,7 +21,7 @@
         <div class="w-full">
             <ul class="flex flex-row justify-center gap-x-5">
                 <li class="flex-1" *ngFor="let category of categories">
-                    <div matRipple matRippleColor="#FFFFFF99" class="w-full relative cursor-pointer hover:scale-105 transition-all">
+                    <div matRipple matRippleColor="#FFFFFF99" class="w-full relative cursor-pointer">
                         <img [src]="category.image" class="rounded-lg z-40" alt="">
                         <div class="absolute top-0 left-0 h-full w-full z-50 category-banner rounded-lg">
                             <div class="flex w-full h-full justify-end items-start flex-col pb-5">
@@ -75,6 +75,80 @@
         </div>
     </div>
 
+    <!-- Job requests? I guess -->
+    <div class="w-full mt-20">
+        <div class="grid grid-cols-4 gap-x-4">
+            <div class="col-span-1 rounded-lg border p-4 flex flex-col gap-y-3" *ngFor="let cast of casts">
+                <div class="w-full">
+                    <span class="font-bold text-lg">Disney & Ramen Brand Spot, 'Inside Out 2'</span>
+                </div>
+                <div class="w-full flex flex-row gap-x-2">
+                    <div class="bg-[#E4E8EB] rounded-full py-1 px-3 text-xs">Feature Film</div>
+                    <div class="bg-[#E4E8EB] rounded-full py-1 px-3 text-xs">Comedy</div>
+                </div>
+                <div>
+                    <span class="text-sm font-thin">
+                        Casting a mother and daughter for a brand spot our startup is partnering up with Disney on for their new movie...
+                    </span>
+                </div>
+                <div class="flex flex-col gap-y-2">
+                    <div class="flex flex-row items-center bg-[#F4F6F8] rounded-md py-2 px-2">
+                        <mat-icon color="primary" class="mx-2" style="width: 18px; height: 18px; font-size: 18px;">account_box</mat-icon>
+                        <div class="flex-1">
+                            <span class="text-base font-thin">Lead</span>
+                        </div>
+                        <div class="mr-2">
+                            <span class="font-thin">18 - 98</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-row items-center bg-[#F4F6F8] rounded-md py-2 px-2">
+                        <mat-icon color="primary" class="mx-2" style="width: 18px; height: 18px; font-size: 18px;">account_box</mat-icon>
+                        <div class="flex-1">
+                            <span class="text-base font-thin">Model</span>
+                        </div>
+                        <div class="mr-2">
+                            <span class="font-thin">18 - 98</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-row items-center bg-[#F4F6F8] rounded-md py-2 px-2">
+                        <mat-icon color="primary" class="mx-2" style="width: 18px; height: 18px; font-size: 18px;">account_box</mat-icon>
+                        <div class="flex-1">
+                            <span class="text-base font-thin">Actor</span>
+                        </div>
+                        <div class="mr-2">
+                            <span class="font-thin">18 - 98</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full mt-2">
+                    <button matRipple class="w-full flex py-2 items-center justify-center bg-primary rounded-md">
+                        <span class="text-white">
+                            View all
+                        </span>
+                        <div #badge class="bg-white aspect-square h-full ms-1 rounded-full" [style]="{'width': badge.offsetHeight + 'px'}">
+                            <span class="text-sm text-primary font-bold">3</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Big ass huge button -->
+    <div class="bg-primary py-7 my-20 px-12 rounded-lg flex flex-row items-center">
+        <div class="flex-1">
+            <span class="text-xl text-white">Start finding actors, models, musician, creative, director & freelancers</span>
+        </div>
+        <div>
+            <button matRipple class="px-4 py-3 bg-white text-primary rounded-md">
+                Find Job
+            </button>
+        </div>
+    </div>
+
     <!-- Cast news -->
     <div class="flex flex-col items-center justify-center mt-20">
         <div class="flex flex-row mb-5 items-center">
@@ -82,43 +156,7 @@
             <span class="ms-2">Casting News</span>
         </div>
         <div class="grid grid-cols-4 gap-x-4">
-            <div class="col-span-1 flex flex-col overflow-hidden rounded-lg bg-[#F4F6F8]">
-                <img src="/assets/images/profile.png" class="w-full aspect-video object-cover" alt="">
-                <div class="px-8 py-5 flex flex-col">
-                    <span class="capitalize">how summer training can heat up your career</span>
-                    <span class="text-xs text-gray-400 mt-4">2024.03.08</span>
-                    <div class="flex flex-row mt-4 gap-x-2">
-                        <div class="bg-[#E4E8EB] rounded-full py-1 px-3 text-xs">Casting</div>
-                        <div class="bg-[#E4E8EB] rounded-full py-1 px-3 text-xs">Feature</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-span-1 flex flex-col overflow-hidden rounded-lg bg-[#F4F6F8]">
-                <img src="/assets/images/profile.png" class="w-full aspect-video object-cover" alt="">
-                <div class="px-8 py-5 flex flex-col">
-                    <span class="capitalize">how summer training can heat up your career</span>
-                    <span class="text-xs text-gray-400 mt-4">2024.03.08</span>
-                    <div class="flex flex-row mt-4 gap-x-2">
-                        <div class="bg-[#E4E8EB] rounded-full py-1 px-3 text-xs">Casting</div>
-                        <div class="bg-[#E4E8EB] rounded-full py-1 px-3 text-xs">Feature</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-span-1 flex flex-col overflow-hidden rounded-lg bg-[#F4F6F8]">
-                <img src="/assets/images/profile.png" class="w-full aspect-video object-cover" alt="">
-                <div class="px-8 py-5 flex flex-col">
-                    <span class="capitalize">how summer training can heat up your career</span>
-                    <span class="text-xs text-gray-400 mt-4">2024.03.08</span>
-                    <div class="flex flex-row mt-4 gap-x-2">
-                        <div class="bg-[#E4E8EB] rounded-full py-1 px-3 text-xs">Casting</div>
-                        <div class="bg-[#E4E8EB] rounded-full py-1 px-3 text-xs">Feature</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-span-1 flex flex-col overflow-hidden rounded-lg bg-[#F4F6F8]">
+            <div class="col-span-1 flex flex-col overflow-hidden rounded-lg bg-[#F4F6F8]" *ngFor="let news of casts">
                 <img src="/assets/images/profile.png" class="w-full aspect-video object-cover" alt="">
                 <div class="px-8 py-5 flex flex-col">
                     <span class="capitalize">how summer training can heat up your career</span>

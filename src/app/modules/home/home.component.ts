@@ -43,4 +43,6 @@ export class HomeComponent {
 
   actors: any = Array.from(Array(10).keys());
 
+  casts: any [] = Array.from(Array(4).keys());
+
 }
