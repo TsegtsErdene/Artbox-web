@@ -1,0 +1,159 @@
+<section>
+
+    <!-- Banner -->
+    <div class="-mx-60">
+        <div class="relative">
+            <img src="/assets/images/banner2.jpg" class="rounded-xl w-full" alt="">
+            <div class="absolute w-full h-full top-0 left-0 flex justify-center ps-60 flex-col text-white">
+                <span class="text-4xl font-bold">Express yourself.<br>Play someone else.</span>
+                <span class="text-sm font-thin my-3">Find thousands of roles that are right for you</span>
+                <button matRipple class="w-fit py-2 px-4 bg-white text-primary text-sm uppercase rounded-full">Join Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="flex flex-col items-center w-full mb-20">
+        <div class="mb-5 mt-10 flex items-center">
+            <mat-icon color="primary" style="width: 18px; height: 18px; font-size: 18px;">movie</mat-icon>
+            <span class="ms-3">Find your career</span>
+        </div>
+        <div class="w-full">
+            <ul class="flex flex-row justify-center gap-x-5">
+                <li class="flex-1" *ngFor="let category of categories">
+                    <div matRipple matRippleColor="#FFFFFF99" class="w-full relative cursor-pointer hover:scale-105 transition-all">
+                        <img [src]="category.image" class="rounded-lg z-40" alt="">
+                        <div class="absolute top-0 left-0 h-full w-full z-50 category-banner rounded-lg">
+                            <div class="flex w-full h-full justify-end items-start flex-col pb-5">
+                                <span class="text-white px-5 text-2xl mb-2">{{category.title}}</span>
+                                <span class="text-white px-5 text-xs opacity-80">Бүх төрлийн драм болон театрын жүжигийн хэсэгт тоглох</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Actors? idk some people are here -->
+    <div class="bg-accent py-20 px-80 -mx-80">
+        <div class="grid grid-cols-5 gap-3">
+            <div *ngFor="let actor of actors" class="col-span-1 flex flex-col items-center bg-white py-10 rounded-lg px-10">
+                <img src="/assets/images/profile.png" alt="" class="w-20 h-20 rounded-full">
+                <div class="mt-2">
+                    <span class="font-bold text-base">Уянга Ууганбаяр</span>
+                </div>
+                <div class="w-full rounded-lg border flex items-center justify-center mt-4 py-2 uppercase text-xs font-bold">
+                    <span>Drama actor</span>
+                </div>
+
+                <div class="flex flex-row gap-x-3 w-full mt-3">
+                    <div class="bg-accent flex-1 flex items-center justify-center py-1 rounded-md">
+                        <mat-icon style="width: 18px; height: 18px; font-size: 18px;" color="primary">
+                            account_box
+                        </mat-icon>
+                        <span class="text-xs text-black ms-1">
+                            30 нас
+                        </span>
+                    </div>
+                    <div class="bg-accent flex-1 flex items-center justify-center py-1 rounded-md">
+                        <mat-icon style="width: 18px; height: 18px; font-size: 18px;" color="primary">
+                            height
+                        </mat-icon>
+                        <span class="text-xs text-black ms-1">
+                            180см
+                        </span>
+                    </div>
+                </div>
+
+                <div class="w-full mt-4">
+                    <button matRipple class="bg-primary rounded-md w-full flex items-center justify-center py-3">
+                        <span class="text-white font-bold uppercase text-xs">Message</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cast news -->
+    <div class="flex flex-col items-center justify-center mt-20">
+        <div class="flex flex-row mb-5 items-center">
+            <mat-icon color="primary" style="width: 18px; height: 18px; font-size: 18px;">feed</mat-icon>
+            <span class="ms-2">Casting News</span>
+        </div>
+        <div class="grid grid-cols-4 gap-x-4">
+            <div class="col-span-1 flex flex-col overflow-hidden rounded-lg bg-[#F4F6F8]">
+                <img src="/assets/images/profile.png" class="w-full aspect-video object-cover" alt="">
+                <div class="px-8 py-5 flex flex-col">
+                    <span class="capitalize">how summer training can heat up your career</span>
+                    <span class="text-xs text-gray-400 mt-4">2024.03.08</span>
+                    <div class="flex flex-row mt-4 gap-x-2">
+                        <div class="bg-[#E4E8EB] rounded-full py-1 px-3 text-xs">Casting</div>
+                        <div class="bg-[#E4E8EB] rounded-full py-1 px-3 text-xs">Feature</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-1 flex flex-col overflow-hidden rounded-lg bg-[#F4F6F8]">
+                <img src="/assets/images/profile.png" class="w-full aspect-video object-cover" alt="">
+                <div class="px-8 py-5 flex flex-col">
+                    <span class="capitalize">how summer training can heat up your career</span>
+                    <span class="text-xs text-gray-400 mt-4">2024.03.08</span>
+                    <div class="flex flex-row mt-4 gap-x-2">
+                        <div class="bg-[#E4E8EB] rounded-full py-1 px-3 text-xs">Casting</div>
+                        <div class="bg-[#E4E8EB] rounded-full py-1 px-3 text-xs">Feature</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-1 flex flex-col overflow-hidden rounded-lg bg-[#F4F6F8]">
+                <img src="/assets/images/profile.png" class="w-full aspect-video object-cover" alt="">
+                <div class="px-8 py-5 flex flex-col">
+                    <span class="capitalize">how summer training can heat up your career</span>
+                    <span class="text-xs text-gray-400 mt-4">2024.03.08</span>
+                    <div class="flex flex-row mt-4 gap-x-2">
+                        <div class="bg-[#E4E8EB] rounded-full py-1 px-3 text-xs">Casting</div>
+                        <div class="bg-[#E4E8EB] rounded-full py-1 px-3 text-xs">Feature</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-1 flex flex-col overflow-hidden rounded-lg bg-[#F4F6F8]">
+                <img src="/assets/images/profile.png" class="w-full aspect-video object-cover" alt="">
+                <div class="px-8 py-5 flex flex-col">
+                    <span class="capitalize">how summer training can heat up your career</span>
+                    <span class="text-xs text-gray-400 mt-4">2024.03.08</span>
+                    <div class="flex flex-row mt-4 gap-x-2">
+                        <div class="bg-[#E4E8EB] rounded-full py-1 px-3 text-xs">Casting</div>
+                        <div class="bg-[#E4E8EB] rounded-full py-1 px-3 text-xs">Feature</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Big 2 buttons here -->
+    <div class="my-20 flex flex-row gap-x-4">
+        <div class="flex flex-row bg-primary flex-1 p-8 rounded-lg text-white">
+            <div class="flex-1 flex flex-col">
+                <span>For Finding Talent</span>
+                <span class="text-xs font-thin">Looking for talent for your project?</span>
+            </div>
+            <div class="flex items-center justify-center">
+                <button matRipple class="bg-white h-full text-primary px-5 rounded-md">Post a Job</button>
+            </div>
+        </div>
+        <div class="flex flex-row bg-black flex-1 p-8 rounded-lg text-white">
+            <div class="flex-1 flex flex-col">
+                <span>For Talent</span>
+                <span class="text-xs font-thin">Managing or representing talent?</span>
+            </div>
+            <div class="flex items-center justify-center">
+                <button matRipple class="bg-white h-full text-black px-5 rounded-md">Sign Up</button>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<app-footer></app-footer>
